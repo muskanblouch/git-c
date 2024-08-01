@@ -1,0 +1,59 @@
+hi!
+git hub
+drop table employee;
+
+insert into employee (id, name, age, salary, dept, is_active) values (100, "Sam", 45, 45000, 'finance', 1),
+ (101, "Tom", 35, 35000, ' Finance', 0),  (102, "Nir", 40, 40000, ' FINANCE', 1),  (103, "Rick", 50, 50000, ' HR', 1),
+  (104, "Maria", 55, 55000, ' HR ', 1),  (105, "Lara", 45, 45000, 'Sales', 0),  (106, "Samy", 65, 65000, 'Sales', 1);
+  
+  insert into employee (id, name, age, salary, dept, is_active) values (100, "Sam", 45, 45000, 'finance', 1),
+  (105, "Lara", 45, 45000, 'Sales', 0);
+   insert into employee (id, name, age, salary, dept, is_active) values(106, "Tara", 45, 45056.48, 'Sales', 0);
+  
+  select * from employee; 
+
+
+
+
+
+
+insert into employee(emp_id,emp_name,dept_id,mgr_id) values (105,"Ahmad",2,115);
+
+
+ select * from employee where is_active !=0;
+  select * from employee where is_active!=0 or age <=70;
+  select * from employee where is_active !=0 and age <= 50;
+  set sql_safe_updates=0;
+  delete from employee where is_active=0;
+  select ltrim(dept) from employee;
+  select rtrim(dept) from employee;
+  select trim(dept) from employee;
+  select upper(dept) from employee;
+  select lower(dept) from employee;
+  
+  
+  select cast(age as char) as age from employee;
+  select cast(age as signed) as age from employee;
+  
+select truncate(salary, 1) from employee;
+select round(salary,1) as rounded_salary from employee;
+
+select * from employee where name like 'Maria';
+select * from employee where name like 'Maria';
+select * from employee where name like "%i%";
+select * from employee where name like "%m";
+select * from employee where name like "%s___";
+select * from employee where name like "___";
+select * from employee where name like "R___";
+
+
+
+select emp_id,emp_name,dept_id  from employee;
+select emp_id,emp_name,dept_id  from employee where dept_id=2;
+select distinct dept_id from employee; (unique id's ko lany ky leay hum distinct ki query likhty hn)
+select emp_id,emp_name,mgr_id as manager_id  from employee (alies ki query ko field, ya table ka temporary name dyny ky leay likhty hn)
+
+join query
+use employee_sys;
+select d.dept_id,d.dept_name,e.emp_id,e.emp_name,e.dept_id,e.mgr_id from department as d join employee as e 
+on d.dept_id=e.dept_id;  (join ki query 2 tables ki columns ko join krny ky leay likhty hn )
