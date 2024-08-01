@@ -1,0 +1,508 @@
+R programming
+
+name<- "john syna"
+age<- 28
+name
+age
+# for loop
+for(x in 1:10){
+  print(x)
+}
+
+#concatenate
+text<- "awesome"
+paste("you are", text)
+
+text<- "awesome"
+text1<- "you are"
+paste(text1, text)
+
+num<-5
+num1<-10
+num+num1
+
+num<- 5
+text <- "ali"
+num+ text
+
+# legal variables name
+myvaR <- "JOHN"
+my_var <-"john"
+myVar<- "john"
+MYVAR<-"JOHN"
+myvar2<-"john"
+.myvar<-"john"
+
+
+# multiple variable
+var1<-var2<-var3<-"orange"
+var1
+var2
+var3
+
+#data types
+n=4
+typeof(n)
+
+s="ali"
+typeof(s)
+# basic datatypes
+# numeric
+# integer
+# character
+# logical
+# complex
+
+#numeric 
+n<-12.5
+class(n)
+# integer
+p<-12L
+class(p)
+# character 
+d="sally"
+class(d)
+#logical
+bol=TRUE
+class(bol)
+# complex
+b<-3i+3
+class(b)
+#type conversion
+#as.numeric()
+#as.integer()
+#ascomplex()
+x<-5
+y<-6L
+a<-as.integer(x)
+b<-as.numeric(y)
+x
+y
+class(a)
+class(b)
+
+#built in math functions
+max(12, 14, 15)
+min(1, 5, 9)
+sqrt(64)
+abs(-5.6)#gives absolute (positive) value of a number
+#ceiling  rounds a number upwords to its nearest value
+# floor function rounds a number downward to its nearest value
+ceiling(12.5)
+floor(5.6)
+# assigining a string to a variaable
+str<- "good"
+str
+nchar(str)#nchar is used to find the number of characters in a string
+grepl("o",str)# grepl is used to check a character or a sequence of characters present in a string.
+grepl("ood", str)
+#combine two string: use paste() function to concaenate/merge two strings
+str1<-"muskan"
+str2<-"Naheed"
+paste(str1,str2)
+#escape character
+str5<-"we are \"muslim\", shia."
+#logical values
+a<-12
+b<-15
+a>b
+10+5
+l=2^6
+l
+j=89%%2
+j
+o=89%/%9
+o
+#nested if
+x<-41
+if(x>10){
+  print("above ten")}
+  if(x>20){
+    print('above 20')
+  }else{
+    print("not above")
+}  
+else{
+    print("below 10")
+  }
+#loops
+#while loop
+# for loop
+i=1
+while(i<=6){
+  print(i)
+  i<-i+1
+}
+dice=1
+while(dice<=6){
+  if(dice<6){
+    print("noyahteez")
+  }else{
+    print("yahteez")
+  }dice<-dice+1
+}
+fruits=list("cherry", "mango")
+for(x in fruits){
+  print(x)
+}
+dice<-c(1,2,3,4,5,6)
+print(dice)
+my_function<-function(){
+  print("hello, world")
+}
+my_function()
+
+var<-function(x)
+{
+  return(5*x)
+}
+print(var(3))
+print(var(5))
+
+#vectors
+fruits<-c("banana", "orange", 'mango')
+fruits
+numbers<-c(1, 2, 5)
+numbers
+numbers<-1:10
+numbers
+numbers1<-1.5:6.5
+numbers1
+numbers2<-5.5:10.5
+numbers2
+logical<-c(TRUE, FAlSE,)
+logical
+
+fruits<-c("banana", "orange", 'mango')
+length(fruits)
+fruits<-c("banana", "orange", 'mango')
+fruits[-1]
+fruits
+fruits[1]<-"pear"
+fruits[c(1,3)]
+sort(fruits)
+numbers<-c(1,2,3,4,10,100,5)
+sort(numbers)
+
+g=rep(c(1,2,3), time=3)
+g
+g=rep(c(1,2,3), time=c(1, 6,8))
+g
+
+numbers<-1:50
+numbers
+
+numbers<-seq(from=0, to = 100, by = 20)
+numbers
+
+
+g=rep(c(1,2,3), each=3)
+g
+
+
+mlist<-list("apple","banana","orange", 567)
+mlist[2]<-"blackgraunt"
+mlist
+length(mlist)
+"567"%in% mlist
+append(mlist, "cherry")
+append(mlist, "gagloo", after=2)
+newlist<- mlist[-1]
+mlist
+newlist[1:3]
+dryfruits<-list("ehf","dfhuf",'djsfhui',"fhffy","jfiklwo")
+for(x in dryfruits){
+  print(x)
+}
+dryfruits
+list5=c(mlist, dryfruits)
+list5
+print(list5)
+
+
+# dot plot
+plot(10,20)
+plot(c(2,4,6,8,10), c(43,12,14,16,18))
+plot(c(43,67,53,32,14), c(12,14,65,10,14))
+plot(c(2,4,6,8,10), c(12,14,16,18,20))
+plot(1:10)
+plot(1:10, xlab="the x axis", ylab="the y axis", main="graph", col="pink", cex=2, pch=5 )
+x<-c(12,14,16,18,20)
+y<-c(20,22,26,28,30)
+plot(x,y, main="My graph", labx="The X_axis", laby="The Y_axis", col="skyblue", cex=1, pch=5)
+#LINE PLOT
+plot(10:30, type="l", lwd=5)
+x<-(12,14,16,18,20)
+y<-(22,24,26,28,30)
+plot(x,y, type="l", main="graph", xlab="the x_axis", ylab="the Y_axis", col="navy", lwd=5, lty=1)
+#SCATTER PLOT
+x1<-c(12,14,16,18,20,43,56,78,98,15,76,65,99,110)
+y1<-c(20,22,26,28,30,34,45,65,67,89,81,79,97,120)
+x2<-c(12,14,16,18,20)
+y2<-c(20,22,26,28,30)
+plot(x,y, main="My graph", labx="The X_axis", laby="The Y_axis", col="skyblue", cex=1, pch=5)
+points(x2,y2,col="blue",cex=2 )
+#pie chart
+x<-c(10,20,30,40)
+label<-c("apple","banana","cherry","peach","mango")
+pie(x, label=label, main= "fruits")
+label<-c("apple","banana","cherry","peach","mango")
+colors<-c("pink","navy","skyblue","grey")
+pie(x, label=label, main= "fruits", col=colors)
+legend("bottomright",label, fill=colors)
+# Hist and column cart
+x<-c("A", "B", "C","D")
+y<-c(2, 4, 6, 8)
+barplot(y, names.arg=x)x<-c("A", "B", "C","D")
+heights<-c(5,120,155,167,300,168,188,170,180,177,165,175)
+hist(heights, breaks=10)
+# finding outliers
+heights<-c(5,120,155,167,300,168,188,170,180,177,165,175)
+IQR(heights)
+summary(heights)
+Tmin=5-(1.5*15.25)
+Tmax=300+(1.5*15.25)
+heights[which(heights<Tmin| heights>Tmax)]
+
+
+# dot plot
+plot(1, 30)
+plot(c(12,4,6,8,16), c(34,45,76,98,100))
+plot(1:10, col="navy", cex=2, pch=2, main="my graph", xlab="The X_axis", ylab="The Y_axis") 
+x<-c(12,14,16,18,20)
+y<-c(10,20,30,40,50)
+plot(x,y, main="Mera graph", xlab="the x axis", ylab="the y axis", col="skyblue", cex=1, pch=3)
+#line plot
+plot(1:10, type="l")
+plot(1:30, type="l",col="brown", lwd=5, lty=12) 
+x<-c(12,14,16,18,20)
+y<-c(10,20,30,40,50)
+plot(x,y, type="l", main="line graph", xlab="the x axis", ylab=" the y axis",col="skyblue",lwd=5, lty=1)
+plot(x,y, type="l", main="graph", xlab="the x_axis", ylab="the Y_axis", col="navy", lwd=5, lty=1)
+#SCATTER PLOT
+x1<- c(12,14,56,78,98,54,43,32,21,110,99,97,77,55,45,63,71,88,95,52)
+y1<-c(13,65,87,90,34,74,81,91,73,85, 93, 63, 76, 66, 34,65,29,10, 19,100)
+x2<-c(12, 45, 67, 95, 54, 66, 81, 53, 64)
+y2<-c(55, 66,77, 88, 99, 32, 42, 56, 96)
+plot(x1,y1, main="scater plot", xlab="the x axis", ylab="the y axis", col="pink", cex=2, pch=1)
+points(x2,y2, col="blue", cex=2)
+plot(x1,y1, main="My graph", labx="The X_axis", laby="The Y_axis", col="skyblue", cex=1, pch=5)
+points(x2,y2,col="blue",cex=2 )
+# pie chart
+pie(1:10)
+x<-c(10,20,30, 40)
+naming<-c("diamond", "silver", "platinium", "gold")
+pie(x, label=naming, main= "jewlery")
+naming<-c("diamond", "silver", "platinium", "gold")
+colors<-c("grey", "pink", "navy", "gold")
+pie(x, label=naming, main="jewlery", col=colors)
+legend("bottomright", naming, fill=colors)
+# hist and Column cart
+x<-c("A", "B","C","D","E")
+y<-c(2,4,6,8,10)
+barplot(y, names.arg=x)
+heights<-c(12,14,56,78,90,52,43,55,67,90,200, -1)
+hist(heights)
+hist(heights, breaks=10)
+# finding outliers
+heights<-c(12,14,56,78,90,52,43,55,67,90,200, -1, -70, 300)
+IQR(heights)
+summary(heights)
+Tmin=-1-(1.5*45.5)
+Tmax=200+(1.5*45.5)
+heights[which(heights<Tmin | heights> Tmax)]
+
+x<-c("pink", "pink","pink","pink", "pink","grey","grey","grey","grey","grey","grey", "navy","navy","navy","navy", "purple","purple",
+     "skyblue","skyblue","green", "gold")
+color_table<- table(x)
+color_table
+count_grey<- color_table["grey"]
+count_grey
+x<-c(12,45,67,89,90,55)
+mean(x)
+round(mean(x),2)
+median(x)
+var(x)
+round(var(x),2)
+sd(x)
+round(sd(x),2)
+x<-c(19,19,34,56,88,88,88,90,56,32,14,56,76,86,99)
+rg<-max(x)-min(x)
+rg
+data()
+df<-women
+head(df)
+tail(df)
+write.csv(df, "sample.csv")
+dat<-read.csv("sample.csv")
+table(df$weight)
+aggregate(df$height, list("weight type"=df$weight),length)
+
+df<-chickwts
+head(df)
+tail(df)
+write.csv(df, "test.csv")
+dat=read.csv("test.csv")
+table(df$feed)
+aggregate(df$weight,list("feed type"=df$feed),length)
+aggregate(df$weight, list("feed type"<-df$feed), sum)
+aggregate(df$weight, list("feed type"<-df$feed), mean)
+
+
+df<-cars
+head(cars)
+
+df=Orange
+head(Orange)
+
+df<-faithful
+head(faithful)
+
+
+df<-rivers
+head(rivers)
+df<-swiss
+head(swiss)
+tail(swiss)
+table(df$swiss)
+write.csv(df, "must.csv")
+dt=read.csv("must.csv")
+table(df$fertility)
+
+
+
+df=mtcars
+head(mtcars)
+tail(mtcars)
+write.csv(df,"mtcars.csv")
+d=read.csv("must.csv")
+table(df$mpg)
+aggregate(df$cyl, list("mpg type"=df$mpg), length)
+aggregate(df$cyl, list("mpg type"=df$mpg), sum)
+aggregate(df$cyl, list("mpg type"=df$mpg), mean)
+
+#PLOTS LECTURE PRACTICE
+
+#DOT PLOT
+plot(1,30)
+plot(1:20)
+plot(c(12,14,16,18,20), c(10,20,30,40,50))
+x<-c(12,14,16,18,20)  
+y<-c(10,20,30,40,50)
+plot(x,y, main="dot plot", xlab="the x axis",  ylab="the y axis", col="navy", cex=1, pch=5)
+plot(x,y, main="Mera graph", xlab="the x axis", ylab="the y axis", col="skyblue", cex=1, pch=3)
+#LINE PLOT
+plot(1:10, type="l")
+x<-c(12,14,16,18,20)  
+y<-c(10,20,30,40,50)
+plot(x,y, type="l", main="line plot", xlab="the x axis",  ylab="the y axis", col="navy", lwd=5, lty=1)
+#SCATER PLOT
+x1<-c(12,14,16,18,20)  
+y1<-c(10,20,30,40,50)
+x2<-c(34,67,65,43,21)
+y2<-c(45,89,90,76,55)
+plot(x1,y1, main="scatter plot", xlab="the x axis", ylab="the y axis", col="skyblue", cex=1, pch=1)
+points(x2,y2, col="navy", cex=1)
+#pie chart
+pie(1:10)
+x<-c(20,30,25,25)
+naming<-c("A", "B", "C", "D")
+colors<-c("pink", "grey","skyblue","navy")
+pie(x, label=naming, col=colors)
+legend("bottomright", naming, fill=colors)
+#histogram
+x<-c("A", "B", "C","E")
+y<-c(10,20,30,40,50)
+barplot(y, names.arg=x, col="navy", width=5, density=5, horiz=TRUE)
+#finding outliers
+heights<-c(12,14,56,78,90,52,43,55,67,90,200,300, -43)
+hist(heights)
+IQR(heights)
+summary(heights)
+Tmin=12-(1.5*36.5)
+Tmax=200+(1.5*36.5)
+heights[which(heights<Tmin | heights>Tmax)]
+
+#regression
+beaver1
+bea=beaver1
+summary(bea)
+head(bea)
+mean(bea$time)
+x<-c(bea$time)
+y<-c(bea$temp)
+plot(x,y, main="beaver of two persons", xlab="time", ylab="temp", col="blue")
+fd=subset(bea, activ==1)
+fd
+g=lm(activ ~ time*temp, data=beaver1)
+g
+
+install.packages("datarium")
+require(datarium)
+data()
+help(marketing)
+marketing
+head(marketing)
+mar=marketing
+mean(mar$youtube)
+x<-c(mar$youtube)
+y<-c(mar$sales)
+plot(x,y, main="sales of social media", xlab="youtubes sales", ylab="sales impact", col="navy")
+mar=marketing
+mar<-lm(sales ~ youtube*facebook, data=marketing )
+summary(mar)
+
+
+        
+#corelations
+#note jidr jidr ma ny r=something likha hy udr eual ky sign ni aana bulky approximately equal ka sign aaye ga.
+#perfect positive coreltion(r=1)
+x1<-c(2,4,6,8,10)
+y1<-c(10,20,30,40,50)
+plot(x1,y1, main="perfect positive corelation (r=1)", xlab="x", ylab="y", col="navy", pch=19)
+abline(lm(y1 ~ x1), col="pink")
+cat("perfect positive corelation(r=1):", cor(x1,y1), "\n")
+cor(x1,y1)
+
+#perfect negative corelation (r=-1)
+x2<-c(2,4,6,8,10)
+y2<-c(50,40,30,20,10)
+plot(x2,y2, main="perfect negative corelation(r=-1)", xlab="x", ylab="y", col="blue", pch=19)
+abline(lm(y2~x2), col="skyblue")
+cat("perfect negative corelation (r=-1)", cor(x2,y2), "\n")
+cor(x2,y2)
+
+#no relation (r=0)
+set.seed(4)
+x3<-rnorm(10)
+y3<-rnorm(10)
+plot(x3,y3, main="no relation(r=0)", xlab="x", ylab="y", col="gold", pch=19)
+abline(lm(y3~x3), col="orange")
+cat("no relation(r=0):", cor(x3,y3), "\n" )
+cor(x3,y3)
+
+
+# strong positive corelation(r=0.7)
+x4<-c(12,14,16,28,20,22,24,26,28,30)
+y4<-x4+rnorm(10, 0, 1)
+plot(x4,y4, main="strong positive corelation(r=0.7)", xlab="x", ylab="y", col="black", pch=19)
+abline(lm(y4~x4), col="grey")
+cat("strong positive corelation(r=0.7):", cor(x4,y4), "\n")
+cor(x4,y4)
+
+
+#weak negative corelation(r=-0.7)
+x5<-c(1,2,3,4,5,6,7,8,9,10)
+y5<--0.5*x4+rnorm(10,0,2)
+plot(x5, y5, main="weak negative corelation", xlab="x", ylab="y", col="purple", pch=19)
+abline(lm(y5~x5), col="navy")
+cat("perfect weak corelation(r=-0.7)", cor(x5,y5), "\n")
+cor(x5,y5)
+
+
+
+
+
+
+
+
